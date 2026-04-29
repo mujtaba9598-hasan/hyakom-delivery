@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hyakom Delivery Services | Food & Parcel Delivery</title>
+<meta name="description" content="Hyakom is a delivery partner for restaurants, retail, and businesses across the UAE. Fleet on standby, real time tracking, friendly riders." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg-0: #060812;
+    --accent: #f87171;
+    --accent-soft: #f8717128;
+    --ice: rgba(255,255,255,0.06);
+    --ice-strong: rgba(255,255,255,0.12);
+    --line: rgba(255,255,255,0.1);
+    --text: #eaeef7;
+    --muted: #9aa4bd;
+  }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Manrope', system-ui, sans-serif; background: var(--bg-0); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+  body::before, body::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: -1; }
+  body::before { background: radial-gradient(60% 50% at 18% 12%, #f8717130, transparent 60%), radial-gradient(50% 40% at 82% 10%, rgba(86,116,255,0.16), transparent 60%), radial-gradient(60% 60% at 50% 100%, #f8717120, transparent 60%); }
+  body::after { background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 22px 22px; opacity: 0.4; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+  nav.top { display: flex; justify-content: space-between; align-items: center; padding: 24px 28px; max-width: 1180px; margin: 0 auto; }
+  .brand { font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+  .brand span { color: var(--accent); }
+  .nav-links { display: flex; gap: 28px; font-size: 14px; }
+  .nav-links a { color: var(--muted); text-decoration: none; transition: color .25s; }
+  .nav-links a:hover { color: var(--text); }
+  .pill-btn { background: linear-gradient(180deg, var(--accent), #f87171cc); color: #1a1409; border: 0; padding: 11px 20px; font-size: 13px; font-weight: 700; letter-spacing: 0.02em; border-radius: 999px; text-decoration: none; display: inline-block; box-shadow: 0 8px 24px #f8717140; transition: transform .25s, box-shadow .25s; }
+  .pill-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px #f8717159; }
+  header.hero { padding: 0; position: relative; min-height: 720px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 14s ease; }
+  header.hero:hover .hero-bg img { transform: scale(1.06); }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(6,8,18,0.7) 0%, rgba(6,8,18,0.55) 50%, rgba(6,8,18,0.85) 100%); }
+  .hero-content-wrap { position: relative; z-index: 2; padding: 100px 0 110px; }
+  .glass-card { background: rgba(8,12,22,0.58); backdrop-filter: blur(24px) saturate(140%); -webkit-backdrop-filter: blur(24px) saturate(140%); border: 1px solid rgba(255,255,255,0.14); border-radius: 28px; padding: 56px 50px; box-shadow: 0 30px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08); max-width: 720px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--accent-soft); margin-bottom: 28px; }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2.4s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  h1 { font-weight: 700; font-size: clamp(38px, 6vw, 78px); line-height: 1.04; letter-spacing: -0.02em; margin: 0 0 24px; }
+  h1 .accent { background: linear-gradient(120deg, #fff 20%, var(--accent) 80%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .lede { font-size: 18px; color: var(--muted); max-width: 620px; margin: 0 0 38px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .ghost { background: var(--ice); border: 1px solid var(--line); color: var(--text); padding: 11px 20px; font-size: 13px; font-weight: 600; border-radius: 999px; text-decoration: none; display: inline-block; transition: background .25s, border .25s; }
+  .ghost:hover { background: var(--ice-strong); border-color: var(--accent); }
+  .marquee { margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .chip { background: var(--ice); border: 1px solid var(--line); color: var(--muted); padding: 9px 16px; border-radius: 999px; font-size: 13px; }
+  section { padding: 90px 0; }
+  .section-head { text-align: center; max-width: 760px; margin: 0 auto 60px; }
+  .section-head .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .section-head h2 { font-weight: 700; font-size: clamp(30px, 4vw, 46px); margin: 0 0 14px; letter-spacing: -0.01em; }
+  .section-head p { color: var(--muted); margin: 0; font-size: 16px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .svc { background: var(--ice); border: 1px solid var(--line); border-radius: 22px; padding: 32px 28px; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: transform .35s, border-color .35s, background .35s; position: relative; overflow: hidden; }
+  .svc::after { content: ''; position: absolute; top: -40%; right: -40%; width: 60%; height: 80%; background: radial-gradient(closest-side, #f8717130, transparent); opacity: 0; transition: opacity .35s; }
+  .svc:hover { transform: translateY(-6px); border-color: #f8717159; background: var(--ice-strong); }
+  .svc:hover::after { opacity: 1; }
+  .svc .num { color: var(--accent); font-size: 12px; letter-spacing: 0.2em; font-weight: 700; }
+  .svc h3 { margin: 14px 0 10px; font-size: 22px; font-weight: 700; }
+  .svc p { margin: 0; color: var(--muted); font-size: 15px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); background: var(--line); }
+  .stat { background: rgba(8, 12, 22, 0.7); padding: 36px 28px; backdrop-filter: blur(10px); }
+  .stat .num { font-size: 56px; font-weight: 800; letter-spacing: -0.02em; background: linear-gradient(120deg, #fff, var(--accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .stat .label { color: var(--muted); font-size: 14px; }
+  .cta-card { background: linear-gradient(135deg, #f8717130, rgba(86,116,255,0.10)); border: 1px solid #f871714d; border-radius: 28px; padding: 60px; text-align: center; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  .cta-card h3 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; margin: 0 0 14px; letter-spacing: -0.01em; }
+  .cta-card p { color: var(--muted); margin: 0 0 28px; font-size: 17px; }
+  .contact-row { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-top: 32px; font-size: 14px; color: var(--muted); }
+  .contact-row a { color: var(--text); text-decoration: none; transition: color .2s; }
+  .contact-row a:hover { color: var(--accent); }
+  footer.site-foot { border-top: 1px solid var(--line); padding: 32px 0; margin-top: 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--text); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+.float-wa { position: fixed; bottom: 22px; right: 22px; width: 60px; height: 60px; border-radius: 50%; background: #25D366; color: #fff; display: grid; place-items: center; box-shadow: 0 12px 32px rgba(37,211,102,0.42); text-decoration: none; transition: transform .25s, box-shadow .25s; z-index: 9999; animation: waPulse 2.6s ease-in-out infinite; }
+.float-wa:hover { transform: scale(1.08); box-shadow: 0 16px 38px rgba(37,211,102,0.55); }
+.float-wa svg { width: 30px; height: 30px; }
+.float-wa .tip { position: absolute; right: calc(100% + 12px); top: 50%; transform: translateY(-50%); background: #0b0f15; color: #fff; padding: 8px 12px; border-radius: 10px; font-size: 12px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .25s; font-family: 'Inter', system-ui, sans-serif; font-weight: 500; }
+.float-wa:hover .tip { opacity: 1; }
+@keyframes waPulse { 0%,100% { box-shadow: 0 12px 32px rgba(37,211,102,0.42), 0 0 0 0 rgba(37,211,102,0.45); } 50% { box-shadow: 0 12px 32px rgba(37,211,102,0.42), 0 0 0 18px rgba(37,211,102,0); } }
+@media (max-width: 480px) { .float-wa { width: 54px; height: 54px; bottom: 18px; right: 18px; } .float-wa svg { width: 26px; height: 26px; } .float-wa .tip { display: none; } }
+
+.brand { display: inline-flex; align-items: center; gap: 10px; }
+.brand-link { text-decoration: none; color: inherit; }
+.brand-logo { max-height: 84px; width: auto; display: block; object-fit: contain; }
+.footer-logo { max-height: 56px; width: auto; opacity: 0.95; vertical-align: middle; margin-right: 14px; display: inline-block; }
+@media (max-width: 760px) { .brand-logo { max-height: 64px; } .footer-logo { max-height: 44px; } }
+
+.footer-cta { padding: 60px 28px; text-align: center; max-width: 720px; margin: 0 auto 0; }
+.footer-cta h4 { font-size: clamp(22px, 3vw, 32px); font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em; }
+.footer-cta .sub { color: rgba(0,0,0,0.55); font-size: 15px; margin: 0 0 26px; }
+.footer-form { display: flex; flex-direction: column; gap: 12px; }
+.footer-form .ff-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .footer-form .ff-row { grid-template-columns: 1fr; } }
+.footer-form .ff-input, .footer-form .ff-textarea { padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.12); background: #fff; font: inherit; font-size: 15px; color: inherit; resize: vertical; min-height: auto; outline: 0; transition: border-color .2s, box-shadow .2s; }
+.footer-form .ff-input:focus, .footer-form .ff-textarea:focus { border-color: #25D366; box-shadow: 0 0 0 4px rgba(37,211,102,0.18); }
+.footer-form .ff-submit { padding: 14px 22px; background: #25D366; color: #0b0f15; border: 0; border-radius: 12px; font-weight: 700; font-size: 15px; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.footer-form .ff-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(37,211,102,0.35); }
+/* Dark surface variant */
+.footer-cta.dark .sub { color: rgba(255,255,255,0.55); }
+.footer-cta.dark .ff-input, .footer-cta.dark .ff-textarea { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: #fff; }
+.footer-cta.dark .ff-input::placeholder, .footer-cta.dark .ff-textarea::placeholder { color: rgba(255,255,255,0.45); }
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="brand"><img class="brand-logo" src="assets/logos/hyakom-delivery-logo.png" alt="Hyakom Delivery Services" /></div>
+  <div class="nav-links"><a href="#services">Services</a><a href="#trust">Track record</a><a href="#contact">Contact</a></div>
+  <a href="#contact" class="pill-btn">Get a quote</a>
+</nav>
+<header class="hero">
+  <div class="hero-bg"><img src="https://images.pexels.com/photos/12725423/pexels-photo-12725423.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop" alt="Hyakom Delivery Services" loading="eager" decoding="async" /></div>
+  <div class="wrap hero-content-wrap">
+    <div class="glass-card">
+      <span class="eyebrow"><span class="dot"></span> Food & Parcel Delivery</span>
+      <h1>Fast hands<span class="accent">.  Hot food. Right to your door.</span></h1>
+      <p class="lede">Hyakom is a delivery partner for restaurants, retail, and businesses across the UAE. Fleet on standby, real time tracking, friendly riders.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/971524144884?text=hello%2C%20i%20have%20seen%20your%20given%20website%2C%20i%27d%20like%20to%20talk%20more" class="pill-btn" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="#services" class="ghost">Explore services</a>
+      </div>
+      <div class="marquee"><span class="chip">Food delivery</span><span class="chip">Parcel & document</span><span class="chip">Restaurant fleet</span><span class="chip">Business courier</span></div>
+    </div>
+  </div>
+</header>
+<section id="services">
+  <div class="wrap">
+    <div class="section-head"><div class="tag">What we offer</div><h2>Built around what you actually need.</h2><p>Four service lines, one accountable team.</p></div>
+    <div class="grid-3">
+      <div class="svc">
+        <div class="num">01</div>
+        <h3>Food delivery</h3>
+        <p>Hot meals delivered fast for restaurant partners and direct customers.</p>
+      </div>
+      <div class="svc">
+        <div class="num">02</div>
+        <h3>Parcel & document</h3>
+        <p>Same day parcel runs, document drops, and pick ups citywide.</p>
+      </div>
+      <div class="svc">
+        <div class="num">03</div>
+        <h3>Restaurant fleet</h3>
+        <p>Dedicated rider fleet for high volume restaurant partners.</p>
+      </div>
+      <div class="svc">
+        <div class="num">04</div>
+        <h3>Business courier</h3>
+        <p>Scheduled and on demand courier for offices and retailers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="trust">
+  <div class="wrap">
+    <div class="section-head"><div class="tag">Numbers</div><h2>Why owners trust us.</h2><p>Built on referrals from clients who became repeat clients.</p></div>
+    <div class="stats"><div class="stat"><div class="num">4</div><div class="label">Direct lines</div></div><div class="stat"><div class="num">UAE</div><div class="label">Coverage</div></div><div class="stat"><div class="num">Live</div><div class="label">Tracking</div></div><div class="stat"><div class="num">Restaurant</div><div class="label">Partners</div></div></div>
+  </div>
+</section>
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-card">
+      <h3>Ready to start?</h3>
+      <p>Send a message on WhatsApp. We respond with a clear answer or proposal within one working day.</p>
+      <a href="https://wa.me/971524144884?text=hello%2C%20i%20have%20seen%20your%20given%20website%2C%20i%27d%20like%20to%20talk%20more" class="pill-btn">Start the conversation</a>
+      <div class="contact-row"><div>Call <a href="tel:+971524144884">052 414 4884</a></div><div>or <a href="tel:+971564144804">056 414 4804</a></div><div>or <a href="tel:+971509449670">050 944 9670</a></div><div>or <a href="tel:+971509449678">050 944 9678</a></div><div>or <a href="tel:+97172363324">07 236 3324</a></div><div>Email <a href="mailto:hyakom4delivery@gmail.com">hyakom4delivery@gmail.com</a></div><div>United Arab Emirates</div></div>
+    </div>
+  </div>
+</section>
+<div class="wrap">
+  <section class="footer-cta dark">
+  <h4>Have a question?</h4>
+  <p class="sub">Drop a quick message. It opens WhatsApp with your details ready to send.</p>
+  <form class="footer-form" onsubmit="event.preventDefault();var n=this.querySelector('[name=cf_name]').value;var e=this.querySelector('[name=cf_email]').value;var m=this.querySelector('[name=cf_msg]').value;var t='Hello, this is '+n+' ('+e+'). '+m;window.open('https://wa.me/971524144884?text='+encodeURIComponent(t),'_blank');">
+  <div class="ff-row">
+    <input class="ff-input" type="text" name="cf_name" placeholder="Your name" required />
+    <input class="ff-input" type="email" name="cf_email" placeholder="Email address" required />
+  </div>
+  <textarea class="ff-textarea" name="cf_msg" placeholder="What can we help with?" rows="3" required></textarea>
+  <button class="ff-submit" type="submit">Send via WhatsApp</button>
+</form>
+</section>
+<footer class="site-foot">
+    <div><img class="footer-logo" src="assets/logos/hyakom-delivery-logo.png" alt="" /> &copy; 2026 Hyakom Delivery Services</div>
+    <div>Powered by <a href="mailto:hello@quartermasters.me">Quartermasters F.Z.C</a></div>
+  </footer>
+</div>
+<a href="https://wa.me/971524144884?text=hello%2C%20i%20have%20seen%20your%20given%20website%2C%20i%27d%20like%20to%20talk%20more" class="float-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span class="tip">Chat on WhatsApp</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg></a>
+<script>(function(){document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'&&!t.dataset.failed&&t.src.indexOf('picsum.photos')===-1){t.dataset.failed='1';t.src='https://picsum.photos/seed/hyakom-delivery/1600/900';}},true);})();</script>
+</body>
+</html>
